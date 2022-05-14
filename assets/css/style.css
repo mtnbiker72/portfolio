@@ -1,0 +1,272 @@
+/* Default background theme  */
+body {
+  margin-right: 20px;
+  background-image: url(../images/waves.jpeg);  
+  background-size: contain;
+}
+
+/* Define grid area for page */
+.heading1 {
+  grid-area: heading1;
+  font-size: 50px;
+  text-shadow: 2px 2px rgb(126, 3, 56);
+  align-self: center;
+  text-align: center;
+}
+.navbar {
+  grid-area: navbar;
+  font-style: italic;
+  align-self: center;
+  justify-self: right;
+  margin-top: 15px;
+}
+.selfpic {
+  grid-area: selfpic;
+}
+.banner {
+  grid-area: banner;
+  position: relative;
+}
+.about {
+  grid-area: about;
+  position: relative;
+  font-size: 40px;
+  padding-right: 20px;
+  border-right: 5px solid midnightblue;
+  display: grid;
+}
+.text {
+  grid-area: text;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.392);
+  padding: 15px;
+}
+.work {
+  grid-area: work;
+  position: relative;
+  font-size: 40px;
+  padding-right: 20px;
+  border-right: 5px solid midnightblue;
+  display: grid;
+}
+.bigp {
+  grid-area: bigp;
+  position: relative;
+  border: 5px solid midnightblue;
+}
+.lp1 {
+  grid-area: lp1;
+  position: relative;
+  border: 5px solid midnightblue;
+}
+.lp2 {
+  grid-area: lp2;
+  position: relative;
+  border: 5px solid midnightblue;
+}
+.lp3 {
+  grid-area: lp3;
+  position: relative;
+  border: 5px solid midnightblue;
+}
+.lp4 {
+  grid-area: lp4;
+  position: relative;
+  border: 5px solid midnightblue;
+}
+.contact {
+  grid-area: contact;
+  position: relative;
+  font-size: 40px;
+  padding-right: 20px;
+  border-right: 5px solid midnightblue;
+  display: grid;
+}
+.info {
+  grid-area: info;
+  align-self: center;
+}
+.footer {
+  grid-area: footer;
+}
+
+/* Define images  */
+.define-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
+}
+p .small-text {
+  font-size: 20;
+}
+
+/* Define large image on center of page  */
+.big-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  /* max-height: 900px; */
+}
+
+/* The following defines the navigation bar at the top  */
+nav ul {
+  text-align: right;
+  justify-content: space-around;
+}
+nav ul li {
+  display: inline-block;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 30px;
+}
+
+/* The following defines the text in the banner  */
+.banner p {
+  position:absolute;
+  bottom: 150px;
+  top: 300px;
+  right: 120px;
+  font-size: 40px;
+  font-style: bold;
+}
+
+/* Changes the background when the user hovers over the about, contact, or work section  */
+.about:hover {
+  background-color: rgba(132, 132, 134, 0.4);
+}
+.work:hover {
+  background-color: rgba(132, 132, 134, 0.4);
+}
+.contact:hover {
+  background-color: rgba(132, 132, 134, 0.4);
+}
+
+/* The following defines the contact info at the bottom of the page  */
+section ul {
+  display: flex;
+  text-align: right;
+  justify-content: space-around;
+  font-style: italic;
+}
+section ul li {
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 30px;
+}
+
+/* Align the footer in the center  */
+.text-center {
+  text-align: center;
+}
+
+/* Define the position of the Future Project tags on the pictures  */
+.bottom-left p {
+    font-size: 40px;
+    border: 5px solid white;
+    color: white;
+    border-radius: 20px;
+    position: absolute;
+    left: 50px;
+    bottom: 0px;
+    padding: 5px;
+    z-index: 9999;
+}
+
+/* Defines the welcome banner text  */
+.banner .welcome p {
+  font-style: 45;
+  position: absolute;
+  right: 40px;
+  top: 90px;
+}
+/* When the user hovers over a picture, do this */
+.make-larger:hover {
+  transform: scale(1.05);
+  border: 5px solid white;
+  position: absolute;
+  border-radius: 10px;
+  z-index: 9998;
+}
+
+/* This is how the screen will be layed out for a mobile device by default  */
+/* Relocate the text describing the section so it is centered  */
+.grid-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+      "heading1"
+      "navbar"
+      "selfpic"
+      "banner"
+      "about"
+      "text"
+      "work"
+      "bigp"
+      "lp1"
+      "lp2"
+      "lp3"
+      "lp4"
+      "contact"
+      "info"
+      "footer"
+  }
+  .title-align {
+      align-self: center;
+      justify-self: center;
+  }
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+/* This is how the screen will be layed out for a tablet size   */
+/* Relocate the text describing the section so it is centered  */
+@media screen and (min-width: 768px) {
+  .grid-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+          "heading1 heading1"
+          "navbar navbar"
+          "selfpic banner"
+          "about about"
+          "text text"
+          "work work"
+          "bigp bigp"
+          "lp1 lp2"
+          "lp3 lp4"
+          "contact contact"
+          "info info"  
+          "footer footer"
+  }
+  .title-align {
+    justify-self: center;
+    align-self: center;
+  }
+}
+/* This is how the screen will be layed out for a monitor   */
+/* Relocate the text describing the section so it is centered  */
+@media screen and (min-width: 1025px) {
+  .grid-item {
+      display: grid;
+      grid-template-columns: 400px repeat(2, 1fr);
+      grid-template-rows: auto 300px auto repeat(4, 1fr) auto auto;
+      gap: 5px;
+      grid-template-areas: 
+          "heading1 navbar navbar"
+          "selfpic banner banner"
+          "about text text"
+          "work bigp bigp"
+          "work bigp bigp"
+          "work lp1 lp2"
+          "work lp3 lp4"
+          "contact info info"
+          "footer footer footer"
+  }
+  .title-align {
+      justify-self: right;
+      align-self: center;
+  }
+}

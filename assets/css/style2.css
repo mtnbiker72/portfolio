@@ -1,0 +1,67 @@
+/* Define the body section with background lake image  */
+body {
+    position: relative;
+}
+
+body::after {
+    content: "";
+    background-image: url(../images/lake.jpeg);
+    background-size: cover;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+/* Define heading and animation to have h1 slide on the screen  */
+h1 {
+    text-align: center;
+    color: black;
+    font-size: 50px;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+/* Define slidein animation for H1 */
+@keyframes slidein {
+    from {
+      left: 100%;
+      width: 300%;
+    }
+  
+    to {
+        font-size: 300%;
+        margin-right: 75%;
+        width: 150%;
+    }
+}
+
+h2 {
+    font-weight: bold;
+}
+
+/* Tell resume class to gradually fade in text  */
+.resume {
+    animation: fadeIn 5s;
+}
+
+/* Define the fadeIn animation for resume  */
+@keyframes fadeIn {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
